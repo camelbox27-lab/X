@@ -12,12 +12,13 @@ dist/
 build/
 
 # Çıktı ve geçici dosyalar
-gorsel/
 output/
 *.png
 *.jpg
 *.jpeg
 !ornek.jpeg
+# Paylaşım görseli - repoda tutulur
+!gorsel/paylas.jpeg
 
 # Windows
 Thumbs.db
