@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from otomatik_kupon_windows import (
+    gorsel_sec,
     post_telegram_metin,
     post_to_telegram,
     post_to_x,
