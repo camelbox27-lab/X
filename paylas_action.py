@@ -68,6 +68,15 @@ try:
             print(f"Görsel indirilemedi: {exc} — görselsiz devam ediliyor.")
             gorsel = None
 
+    if gorsel is None:
+        # URL yoksa gorsel/ klasöründeki görseli kullan
+        g = gorsel_sec(None)
+        if g:
+            gorsel = str(g)
+            print(f"Görsel klasöründen alındı: {gorsel}")
+        else:
+            print("gorsel/ klasöründe görsel bulunamadı — görselsiz devam.")
+
     if gorsel:
         print("X'e görsel ile paylaşılıyor...")
         x_sonuc = post_to_x(str(gorsel), metin)
