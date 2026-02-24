@@ -1,0 +1,6 @@
+requests
+tweepy
+python-dotenv
+pillow
+flask
+flask-cors

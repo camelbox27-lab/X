@@ -1,0 +1,53 @@
+name: X & Telegram Paylaş
+
+on:
+  workflow_dispatch:
+    inputs:
+      tur:
+        description: 'Paylaşım türü'
+        required: true
+        type: choice
+        options:
+          - gunun-kuponu
+          - gunun-tercihleri
+          - kupon-kazandi
+          - editor-tercihleri
+          - editor-kazandi
+      metin:
+        description: 'Özel metin (boş bırakılırsa türe göre otomatik)'
+        required: false
+        default: ''
+      image_url:
+        description: 'Görsel URL (boş bırakılırsa görselsiz paylaşılır)'
+        required: false
+        default: ''
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu İndir
+        uses: actions/checkout@v4
+
+      - name: Python Kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Bağımlılıkları Kur
+        run: pip install -r requirements.txt
+
+      - name: Paylaş
+        run: python paylas_action.py
+        env:
+          TWITTER_API_KEY:       ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET:    ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN:  ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+          TWITTER_BEARER:        ${{ secrets.TWITTER_BEARER }}
+          TELEGRAM_BOT_TOKEN:    ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:      ${{ secrets.TELEGRAM_CHAT_ID }}
+          PAYLAS_TUR:            ${{ inputs.tur }}
+          PAYLAS_METIN:          ${{ inputs.metin }}
+          PAYLAS_IMAGE_URL:      ${{ inputs.image_url }}

@@ -1,0 +1,49 @@
+{
+  "date": "18.02.2026",
+  "title": "Gunun Kuponu",
+  "brand": "AI SPORTS LAB",
+  "background": {
+    "top": "#130f2a",
+    "middle": "#2a1735",
+    "bottom": "#120f1d",
+    "line_glow": "#ff9f1a",
+    "text_primary": "#f3f3f3",
+    "text_accent": "#ffbe3b"
+  },
+  "picks": [
+    {
+      "match": "Paris Saint-Germain vs AS Monaco",
+      "prediction": "Paris Saint-Germain Kazanir",
+      "odd": "1.50",
+      "player_image_url": "",
+      "left_logo_url": "",
+      "right_logo_url": ""
+    },
+    {
+      "match": "SL Benfica vs Real Madrid",
+      "prediction": "Karsilikli Gol Olur: Evet",
+      "odd": "1.60",
+      "player_image_url": "",
+      "left_logo_url": "",
+      "right_logo_url": ""
+    },
+    {
+      "match": "Galatasaray vs Juventus",
+      "prediction": "Juventus Kose Vuruslari: Ust (4.5)",
+      "odd": "1.68",
+      "player_image_url": "",
+      "left_logo_url": "",
+      "right_logo_url": ""
+    }
+  ],
+  "social": {
+    "caption": "Bugunun kuponu hazir. AI tasarim + otomatik dagitim. #iddaa #futbol #bahis #yapayzeka",
+    "hashtags": [
+      "#kupon",
+      "#gununkuponu",
+      "#football",
+      "#tahmin",
+      "#ai"
+    ]
+  }
+}
