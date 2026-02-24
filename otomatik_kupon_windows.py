@@ -103,7 +103,7 @@ def post_to_telegram(image_path: str, text: str) -> str:
             )
         if resp.status_code == 200:
             return "Telegram paylaşımı başarılı."
-        return f"Telegram hatası: HTTP {resp.status_code}"
+        return f"Telegram hatası: HTTP {resp.status_code} — {resp.text}"
     except Exception as exc:
         return f"Telegram hatası: {exc}"
 
@@ -121,7 +121,7 @@ def post_telegram_metin(text: str) -> str:
         )
         if resp.status_code == 200:
             return "Telegram mesajı başarılı."
-        return f"Telegram hatası: HTTP {resp.status_code}"
+        return f"Telegram hatası: HTTP {resp.status_code} — {resp.text}"
     except Exception as exc:
         return f"Telegram hatası: {exc}"
 

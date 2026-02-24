@@ -23,11 +23,11 @@ from otomatik_kupon_windows import (
 )
 
 PAYLAS_METINLER = {
-    "gunun-kuponu":      "Oddsy'de Günün Banko Kuponu yayında!\n\noddsw.com.tr",
-    "gunun-tercihleri":  "Oddsy'de Günün Tercihleri yayında!\n\noddsw.com.tr",
-    "kupon-kazandi":     "Oddsy Günün Kuponu KAZANDI!\n\noddsw.com.tr",
-    "editor-tercihleri": "Oddsy'de Editör Tercihleri yayında!\n\noddsw.com.tr",
-    "editor-kazandi":    "Oddsy Editörün Tercihi KAZANDI!\n\noddsw.com.tr",
+    "gunun-kuponu":      "Oddsy'de Günün Banko Kuponu yayında!\n\noddsy.com.tr",
+    "gunun-tercihleri":  "Oddsy'de Günün Tercihleri yayında!\n\noddsy.com.tr",
+    "kupon-kazandi":     "Oddsy Günün Kuponu KAZANDI!\n\noddsy.com.tr",
+    "editor-tercihleri": "Oddsy'de Editör Tercihleri yayında!\n\noddsy.com.tr",
+    "editor-kazandi":    "Oddsy Editörün Tercihi KAZANDI!\n\noddsy.com.tr",
 }
 
 tur       = os.environ.get("PAYLAS_TUR", "").strip()
